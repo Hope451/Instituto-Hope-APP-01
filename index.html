@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Instituto Hope Pré-Militar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0f172a; /* Slate 900 */
+        color: #e2e8f0; /* Slate 200 */
+        -webkit-tap-highlight-color: transparent; /* Remove highlight on tap ios */
+      }
+      /* Custom Scrollbar for a 'tech/military' feel */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #059669; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #047857; 
+      }
+      
+      /* Mobile safe area adjustments */
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top);
+      }
+
+      /* PRINT STYLES */
+      @media print {
+        @page {
+          margin: 0;
+          size: auto;
+        }
+        body {
+          background-color: white !important;
+          color: black !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        /* Hide UI Elements */
+        nav, header, aside, .no-print, button, .bottom-nav {
+          display: none !important;
+        }
+        /* Layout resets */
+        #root, main, .flex, .h-screen {
+          display: block !important;
+          height: auto !important;
+          overflow: visible !important;
+          position: static !important;
+        }
+        /* Specific Print Container */
+        .printable-content {
+          padding: 2cm !important;
+          margin: 0 !important;
+          border: none !important;
+          box-shadow: none !important;
+          background: white !important;
+          color: black !important;
+          font-family: 'Courier New', Courier, monospace !important; /* Military typewriter feel */
+        }
+        .printable-content h1, .printable-content h2, .printable-content h3 {
+           color: #000 !important;
+           border-bottom: 2px solid #000 !important;
+        }
+        .print-header {
+          display: flex !important;
+          border-bottom: 4px solid black;
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+        }
+      }
+      .print-header {
+        display: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
+    "@google/genai": "https://esm.run/@google/genai"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
